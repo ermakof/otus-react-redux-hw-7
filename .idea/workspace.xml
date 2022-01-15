@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0b25355-14df-4ba4-bcef-5a7227767348" name="Changes" comment="[main] clone otus-react-redux-hw-7 to current project">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/blank.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/blank.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c0b25355-14df-4ba4-bcef-5a7227767348" name="Changes" comment="[main] configure eslint and CI/CD" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642246387373</updated>
-      <workItem from="1642246388716" duration="2092000" />
+      <workItem from="1642246388716" duration="2405000" />
     </task>
     <task id="LOCAL-00001" summary="[main] clone otus-react-redux-hw-7 to current project">
       <created>1642248078112</created>
@@ -94,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642248078112</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[main] configure eslint and CI/CD">
+      <created>1642248788375</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642248788375</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +116,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[main] clone otus-react-redux-hw-7 to current project" />
-    <option name="LAST_COMMIT_MESSAGE" value="[main] clone otus-react-redux-hw-7 to current project" />
+    <MESSAGE value="[main] configure eslint and CI/CD" />
+    <option name="LAST_COMMIT_MESSAGE" value="[main] configure eslint and CI/CD" />
   </component>
 </project>
