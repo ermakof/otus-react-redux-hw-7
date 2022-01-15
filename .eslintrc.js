@@ -36,4 +36,9 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:jest/recommended',
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };

@@ -55,17 +55,39 @@ jobs:
         id: Chromatic-test
         env:
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        run: npx chromatic --project-token=b0ebe4f8f7fa
+        run: npx chromatic --project-token=d86f78a622d2
 
       - name: Build project
         id: Project-build
         run: npm run build
 
-      - name: Deploy application to GHP public 🚀
+      - name: Build storybook
+        id: Storybook-build
+        run: npm run build-storybook
+
+      - name: Deploy application to GHP, branch gh-pages-app 🚀
         id: Deploy-app
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
+          BRANCH: gh-pages-app # The branch the action should deploy to.
           FOLDER: ./public  # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+
+      - name: Deploy storybook to GHP, branch gh-pages-storybook 🚀
+        id: Deploy-storybook
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages-storybook # The branch the action should deploy to.
+          FOLDER: ./storybook-static  # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+
+      - name: Deploy test-report to GHP, branch gh-pages-test 🚀
+        id: Deploy-test-report
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages-test # The branch the action should deploy to.
+          FOLDER: ./coverage  # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
