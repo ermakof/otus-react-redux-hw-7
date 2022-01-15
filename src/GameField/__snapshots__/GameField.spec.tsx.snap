@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameField renders 3 cells from data:[3 items] 1`] = `
+<DocumentFragment>
+  <section
+    class="css-1ce6rfj"
+    role="cellsGrid"
+  >
+    <div
+      class="css-1wsqmx8"
+      role="cellContainer"
+    >
+      <span
+        class="css-boqvn6"
+        role="cellContent"
+      />
+    </div>
+    <div
+      class="css-alzgoi"
+      role="cellContainer"
+    >
+      <span
+        class="css-boqvn6"
+        role="cellContent"
+      />
+    </div>
+    <div
+      class="css-1jsets4"
+      role="cellContainer"
+    >
+      <span
+        class="css-boqvn6"
+        role="cellContent"
+      />
+    </div>
+    <div
+      style="clear: both;"
+    />
+  </section>
+</DocumentFragment>
+`;

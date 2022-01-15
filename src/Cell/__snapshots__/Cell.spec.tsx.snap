@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell renders <Cell> using renderer cell with value=2 1`] = `
+<DocumentFragment>
+  <div
+    class="css-10vr5h2"
+    role="cellContainer"
+  >
+    <span
+      class="css-b7hmd9"
+      role="cellContent"
+    />
+  </div>
+</DocumentFragment>
+`;
