@@ -8,5 +8,7 @@ describe('AppBody', () => {
     expect(asFragment()).toMatchSnapshot();
     const dataMessage = screen.getByText(/Результат/gi);
     expect(dataMessage).toBeInTheDocument();
+    const percentMessage = screen.getByText(/Процент заполнения/gi);
+    expect(percentMessage).toBeInTheDocument();
   });
 });

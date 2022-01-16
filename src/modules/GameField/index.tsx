@@ -18,7 +18,7 @@ export const FieldContainer = styled.section`
 
 const GameField: FC = () => {
   const { state } = useContext(store);
-  const { gameFieldData, gameFieldSize } = state;
+  const { gameFieldData, gameFieldSize, selectedCells = {} } = state;
   const widthMinus1 = gameFieldSize - 1;
   const heightMinus1 = Math.floor(gameFieldData.length / gameFieldSize) - 1;
 
@@ -38,7 +38,8 @@ const GameField: FC = () => {
           <Cell
             key={`${y}-${x}`}
             num={index}
-            status={item}
+            isFilled={item}
+            isSelected={selectedCells[index]}
             isLeft={isLeft}
             isRight={isRight}
             isBottom={isBottom}

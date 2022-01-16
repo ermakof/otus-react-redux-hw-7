@@ -10,7 +10,6 @@ interface IContainer {
   isLeft?: boolean;
   isBottom?: boolean;
   frameColor?: string;
-  alive?: boolean;
 }
 const Container = styled.div<IContainer>`
   display: block;
@@ -33,19 +32,19 @@ const Container = styled.div<IContainer>`
 `;
 
 interface IContent {
-  alive?: boolean;
+  selected?: boolean;
 }
 const Content = styled.div<IContent>`
   cursor: pointer;
   background: #ffff00;
   border-radius: 50%;
-  background: ${({ alive }) => (alive ? '#ffff0070' : '#ffff00')};
+  background: ${({ selected }) => (selected ? '#ffff00' : '#ffff0070')};
   border-radius: 50%;
   width: 30px;
   height: 30px;
   margin: 5px;
   border: 0.6vh solid transparent;
-  border-color: ${({ alive }) => (alive ? '#9e9e9e' : '#555')};
+  border-color: ${({ selected }) => (selected ? '#555' : '#9e9e9e')};
 
   :hover {
     background: #ffff00;
@@ -54,7 +53,8 @@ const Content = styled.div<IContent>`
 
 export interface CellProps {
   num: number;
-  status?: ICellInfo;
+  isFilled?: ICellInfo;
+  isSelected?: boolean;
   isLeft?: boolean;
   isRight?: boolean;
   isBottom?: boolean;
@@ -62,14 +62,15 @@ export interface CellProps {
 
 const Cell: React.FC<CellProps> = ({
   num,
-  status = ICellInfo.alive,
+  isFilled = 0,
+  isSelected = false,
   isLeft = true,
   isRight = true,
 }) => {
   const { dispatch } = useContext(store);
 
   const handleClick = () => {
-    dispatch(setSelectedCell(num, +!status));
+    dispatch(setSelectedCell(num, !isSelected));
   };
   const frameColor = '#ddd';
 
@@ -78,10 +79,11 @@ const Cell: React.FC<CellProps> = ({
       role={`cellContainer-${num}`}
       isRight={isRight}
       isLeft={isLeft}
-      alive={!!status}
       frameColor={frameColor}
     >
-      <Content role="cellContent" alive={!!status} onClick={handleClick} />
+      {!!isFilled && (
+        <Content role={`cellContent-${num}`} selected={isSelected} onClick={handleClick} />
+      )}
     </Container>
   );
 };

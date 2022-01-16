@@ -7,3 +7,7 @@ export interface CellArray {
   size: number;
   data: ICellInfo[];
 }
+
+export type ISelectedCells = {
+  [index: number]: boolean;
+};

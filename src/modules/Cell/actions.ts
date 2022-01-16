@@ -1,9 +1,8 @@
 import actionType from './actionType';
-import ICellInfo from '@src/model/ICellInfo';
 
-const setSelectedCell = (cellId: number, cellStatus: ICellInfo) => ({
+const setSelectedCell = (cellId: number, selected: boolean) => ({
   type: actionType.SET_SELECTED,
-  payload: { cellId, cellStatus },
+  payload: { cellId, selected },
 });
 
 export { setSelectedCell };

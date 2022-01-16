@@ -14,8 +14,11 @@ describe('AppBody', () => {
 
   it('Render <AppBody> without data', () => {
     const state = {
-      gameFieldSize: 0,
-      gameFieldData: [],
+      gameLevel: '1',
+      gameFieldSize: 3,
+      gameFieldPercentFilled: 10,
+      gameFieldData: [1, 0, 0, 0, 0, 0, 0, 0, 0],
+      selectedCells: {},
     };
     const { asFragment } = render(
       <Store.Provider value={{ dispatch, state }}>
@@ -23,14 +26,17 @@ describe('AppBody', () => {
       </Store.Provider>
     );
     expect(asFragment()).toMatchSnapshot();
-    const dataMessage = screen.getByRole(/dataMessage/gi);
+    const dataMessage = screen.getByRole(/dataList/gi);
     expect(dataMessage).toBeInTheDocument();
   });
 
   it('Render <AppBody> with data', () => {
     const state = {
-      gameFieldSize: 3,
-      gameFieldData: [1, 1, 1, 1, 1, 1, 1, 1, 1],
+      gameLevel: '1',
+      gameFieldSize: 4,
+      gameFieldPercentFilled: 10,
+      gameFieldData: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      selectedCells: {},
     };
     const { asFragment } = render(
       <Store.Provider value={{ dispatch, state }}>

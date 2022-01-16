@@ -1,9 +1,8 @@
-import ICellInfo from '@src/model/ICellInfo';
-
 interface IPayload {
   gameFieldSize?: number;
-  cellStatus?: ICellInfo;
+  selected?: boolean;
   cellId?: number;
+  gameLevel?: string;
 }
 
 export default IPayload;

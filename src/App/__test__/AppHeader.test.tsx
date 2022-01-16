@@ -6,7 +6,11 @@ describe('AppHeader', () => {
   it('Render <AppHeader>', () => {
     const { asFragment } = render(<AppHeader />);
     expect(asFragment()).toMatchSnapshot();
-    const filterInput = screen.getByText(/Game of Life/gi);
-    expect(filterInput).toBeInTheDocument();
+    const title = screen.getByText(/Lines/gi);
+    expect(title).toBeInTheDocument();
+    const button = screen.getByRole(/button/gi);
+    expect(button).toBeInTheDocument();
+    const select = screen.getByRole(/select/gi);
+    expect(select).toBeInTheDocument();
   });
 });
