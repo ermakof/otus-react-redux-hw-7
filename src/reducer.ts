@@ -14,7 +14,7 @@ const reducer = (state: IState, action: IAction) => {
       return {
         ...state,
         gameFieldSize: gameFieldSize,
-        gameFieldData: createGameField(cellsNumber, ICellInfo.alive),
+        gameFieldData: createGameField(cellsNumber),
       };
     }
 
