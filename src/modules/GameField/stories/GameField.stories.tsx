@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { GameField } from '@src/modules/GameField';
+import GameField from '@src/modules/GameField';
 
 export default {
   component: GameField,
