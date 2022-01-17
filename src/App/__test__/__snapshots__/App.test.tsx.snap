@@ -26,21 +26,25 @@ exports[`render App 1`] = `
         role="select"
       >
         <option
+          role="option"
           value="1"
         >
           Падаван
         </option>
         <option
+          role="option"
           value="2"
         >
           Джедай
         </option>
         <option
+          role="option"
           value="3"
         >
           Мастер-джедай
         </option>
         <option
+          role="option"
           value="4"
         >
           Член Совета Силы
