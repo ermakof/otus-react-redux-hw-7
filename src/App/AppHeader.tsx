@@ -23,7 +23,7 @@ const AppHeader: FC = () => {
   };
 
   return (
-    <Panel>
+    <Panel role="topPanel">
       <Title>Lines</Title>
       <Button onClick={handleReset} title="Reset" />
       <Select onSelect={handleSelectLevel} />

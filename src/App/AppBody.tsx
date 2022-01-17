@@ -9,7 +9,7 @@ const Root = styled.div`
 
 const AppBody: FC = () => {
   return (
-    <Root role="dataList">
+    <Root role="gamePanel">
       <GameField />
     </Root>
   );

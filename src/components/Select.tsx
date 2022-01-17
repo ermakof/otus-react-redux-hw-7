@@ -7,18 +7,24 @@ const Root = styled.select`
   margin: auto 20px;
 `;
 
-interface IButton {
+export interface ISelect {
   onSelect?: (level: React.ChangeEvent<HTMLSelectElement>) => void;
 }
-const Select: FC<IButton> = ({ onSelect }) => {
+const Select: FC<ISelect> = ({ onSelect }) => {
   return (
     <Root role="select" name="select" onChange={onSelect}>
-      <option value="1" defaultValue="1">
+      <option role="option" value="1" defaultValue="1">
         Падаван
       </option>
-      <option value="2">Джедай</option>
-      <option value="3">Мастер-джедай</option>
-      <option value="4">Член Совета Силы</option>
+      <option role="option" value="2">
+        Джедай
+      </option>
+      <option role="option" value="3">
+        Мастер-джедай
+      </option>
+      <option role="option" value="4">
+        Член Совета Силы
+      </option>
     </Root>
   );
 };

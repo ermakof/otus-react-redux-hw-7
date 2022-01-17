@@ -26,7 +26,7 @@ describe('AppBody', () => {
       </Store.Provider>
     );
     expect(asFragment()).toMatchSnapshot();
-    const dataMessage = screen.getByRole(/dataList/gi);
+    const dataMessage = screen.getByRole(/gamePanel/gi);
     expect(dataMessage).toBeInTheDocument();
   });
 
@@ -44,7 +44,7 @@ describe('AppBody', () => {
       </Store.Provider>
     );
     expect(asFragment()).toMatchSnapshot();
-    const dataList = screen.getByRole(/dataList/gi);
+    const dataList = screen.getByRole(/gamePanel/gi);
     expect(dataList).toBeInTheDocument();
     const dataItems = screen.getAllByRole(/cellContainer/gi);
     expect(dataItems.length).toBe(9);

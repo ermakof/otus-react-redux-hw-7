@@ -7,7 +7,7 @@ const Root = styled.button`
   margin: auto 20px;
 `;
 
-interface IButton {
+export interface IButton {
   title?: string;
   onClick?: () => void;
 }

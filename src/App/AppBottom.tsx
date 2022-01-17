@@ -12,7 +12,7 @@ const AppBottom: FC = () => {
   const { gameFieldPercentFilled } = state;
 
   return (
-    <Panel>
+    <Panel role="bottomPanel">
       <Message role="messageResult">Результат:</Message>
       <Message role="messagePercentFilled">{`Процент заполнения: ${gameFieldPercentFilled}`}</Message>
     </Panel>

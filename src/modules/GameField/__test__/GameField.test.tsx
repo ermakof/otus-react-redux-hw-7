@@ -4,17 +4,18 @@ import { render, screen } from '@testing-library/react';
 import Store from '@src/store';
 import { IAction, IState } from '@src/model';
 
-let handleClick: (cellId: number) => void;
 let dispatch: (action: IAction) => void;
 let state: IState;
 
 describe('GameField', () => {
   beforeEach(() => {
     dispatch = jest.fn();
-    handleClick = jest.fn();
     state = {
-      gameFieldSize: 9,
-      gameFieldData: [1, 1, 1, 1, 1, 1, 1, 1, 1],
+      gameLevel: '1',
+      gameFieldSize: 3,
+      gameFieldPercentFilled: 10,
+      gameFieldData: [1, 0, 0, 0, 0, 0, 0, 0, 0],
+      selectedCells: {},
     };
   });
 
@@ -28,6 +29,6 @@ describe('GameField', () => {
     const cellsGrid = screen.getByRole(/cellsGrid/gi);
     expect(cellsGrid).toBeInTheDocument();
     const cellContainer = screen.getAllByRole(/cellContainer/gi);
-    expect(cellContainer.length).toBe(9);
+    expect(cellContainer.length).toBe(5);
   });
 });
